@@ -15,35 +15,13 @@ for (int i = 0; i < array.Length; i++)
     text = text + array[i] + ", ";
 }
 
-char [] massive = new char [text.Length];
-    for(int i = 0; i < text.Length; i++)
+int num = Convert.ToInt32(text);
+int[] arrayNum = {num};
+Console.WriteLine(arrayNum);
+/*char [] massive = new char [text.Length];
+    for (int i = 0; i < text.Length; i++)
     {
         array[i] = text[i];
     }
-Console.WriteLine(text);
-Console.WriteLine();
-/*
-Console.WriteLine("Задача 29: Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран.");
-int[] array = new int[8];
-int index = 0;
-FillArray(array);
-Console.WriteLine($"Длинна массива {array.Length}");
-while (index < array.Length)
-{
-    Console.Write(array[index]);
-    index++;
-}
-  
-
-
-void FillArray(int[] collection)
-{
-    int length = collection.Length;
-    int index = 0;
-    while(index< length)
-    {
-        collection[index] = new Random().Next(0, 10);
-        index++;
-    }
-} 
-*/
+Console.WriteLine($"{text}");
+Console.WriteLine();*/
