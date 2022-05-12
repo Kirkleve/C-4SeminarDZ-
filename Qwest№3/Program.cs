@@ -5,17 +5,35 @@
 В оригинале нужно пользователю ввести строку - ряд чисел через запятую,
 а программа превращает эту строку в полноценный массив и выводит. Рекомендую вторым вариантом)*/
 
-Console.WriteLine("Введите значения массива через запятую");
-string? array = Console.ReadLine();
 
+string? number = Console.ReadLine();
+string newNumber = Replace(number, ',', ' ');
+char[] array;
+array = newNumber.ToCharArray();
+WriteArray(array);
 
-
-
-/*
-int index = 0;
-while (index < array.Length)
+void WriteArray(char[] array)
 {
-    Console.Write(array[index] + " ");
-    index += 2;
+    for (int i = 0; i < array.Length; i++)
+    {
+        Console.Write(array[i]);
+    }
+    Console.WriteLine();
 }
-*/
+
+string Replace(string number, char oldValue, char newValue)
+{
+    string result = String.Empty;
+
+    int length = number.Length;
+    for (int i = 0; i < length; i++)
+    {
+        if(number[i] == oldValue)
+        {
+            result = result + $"{newValue}";
+        }
+        else result = result + $"{number[i]}";
+    }
+    return result;
+}
+
