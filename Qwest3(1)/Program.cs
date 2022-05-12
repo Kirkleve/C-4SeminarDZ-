@@ -4,7 +4,7 @@
 
 
 
-Console.WriteLine("Введите длину массива из 8 элементов ");
+Console.WriteLine("Введите значения индексов массива из 8 элементов ");
 int[] array = new int[8];
 string text = String.Empty;
 
@@ -19,7 +19,7 @@ Console.WriteLine(text);
 
 for (int i = 0; i < array.Length; i++)
 {
-    string[] _arrayNumbers = text.Split(new char[] {','});
+    string[] arrayNumbers = text.Split(new char[] {','});
     text = text + array[i];
 }
 

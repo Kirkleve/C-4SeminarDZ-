@@ -6,12 +6,16 @@
 а программа превращает эту строку в полноценный массив и выводит. Рекомендую вторым вариантом)*/
 
 Console.WriteLine("Введите значения массива через запятую");
+string? array = Console.ReadLine();
 
-string array = Console.ReadLine();
 
+
+
+/*
 int index = 0;
-while(index<array.Length)
+while (index < array.Length)
 {
-    Console.Write( array[index]+ " ");
-    index+=2 ;
+    Console.Write(array[index] + " ");
+    index += 2;
 }
+*/

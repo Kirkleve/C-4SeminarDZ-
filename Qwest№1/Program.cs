@@ -5,6 +5,15 @@
 Console.WriteLine("Введите два числа: ");
 int a = Convert.ToInt32(Console.ReadLine());
 int b = Convert.ToInt32(Console.ReadLine());
-double pow = Math.Pow(a,b);
-Console.WriteLine($"Число " + a + " в степени " + b + " будет " + pow);
 
+Pow(a,b);
+
+Console.WriteLine($"Число " + a + " в степени " + b + " будет " + Pow(a,b));
+
+int Pow(int number, int pow)
+{
+    int result = 1;
+    for(int i = 0; i < pow; i++)
+        result *= number;
+    return result;
+}
